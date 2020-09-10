@@ -1,0 +1,43 @@
+#include<stdio.h>
+void main()
+{
+int a,b,c;
+printf("输入整型数字\n");
+scanf("%d%d%d",&a,&b,&c);
+switch(a>b&&b>c)
+{
+case 0:{
+	   if(a<b&&b>c)
+	   {
+		   if(a>c)  
+		   {
+	   printf("最大:%d,最小:%d\n",b,c);
+		   }
+		   else
+		   {
+			   printf("最大:%d,最小:%d\n",b,a);
+		   }
+	   }
+	   else if(a>b&&b<c)
+	   { 
+		   if(a>c)
+		   {
+	   printf("最大:%d,最小:%d\n",a,b);
+		   }
+		   else
+		   {
+			   printf("最大:%d,最小:%d\n",c,b);
+		   }
+	   }
+	   else if(a<b&&b<c)
+	   {
+		   printf("最大值:%d,最小值:%d\n",c,a);
+	   }
+	   break;
+	   }
+case 1:{
+	printf("最大值:%d,最小值:%d\n",a,c);
+	   }
+	break;   /*此处的break可有可无*/
+}
+}
